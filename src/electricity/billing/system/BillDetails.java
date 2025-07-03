@@ -4,7 +4,6 @@ import java.awt.Color;
 import javax.swing.*;
 import java.sql.*;
 import net.proteanit.sql.DbUtils;
-import net.proteanit.sql.DbUtils.*;
 
 public class BillDetails extends JFrame {
     

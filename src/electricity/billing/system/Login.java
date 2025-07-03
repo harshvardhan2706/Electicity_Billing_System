@@ -1,10 +1,9 @@
 package electricity.billing.system;
 
-import java.awt.Color;
-import javax.swing.*;
-import java.awt.event.*;
 import java.awt.*;
+import java.awt.event.*;
 import java.sql.*;
+import javax.swing.*;
 
 public class Login extends JFrame implements ActionListener {
 
@@ -86,7 +85,7 @@ public class Login extends JFrame implements ActionListener {
                 
                 try{
                     Conn c = new Conn();
-                    String query =("select * from login where username='"+susername+"'and password= '"+spassword+"'and user= '"+user+"' ");
+                    String query =("select * from login where username='"+susername+"'and password= '"+spassword+"'and \"user\"= '"+user+"' ");
                     
                     ResultSet rs= c.s.executeQuery(query);
                     

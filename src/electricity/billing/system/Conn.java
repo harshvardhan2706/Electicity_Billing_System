@@ -9,12 +9,15 @@ public class Conn {
     public Conn() {
         try {
             // Load MySQL JDBC Driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("org.postgresql.Driver");
 
             // Connect to database
-            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/ebs", "root", "hv@123");
+            c = DriverManager.getConnection("jdbc:postgresql://localhost:5433/ebs", "postgres", "92844");
             s = c.createStatement();
-        } catch (Exception e) {
+        }catch(ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (SQLException e) {
             e.printStackTrace();
         }
     }

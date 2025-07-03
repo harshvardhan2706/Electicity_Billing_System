@@ -1,4 +1,3 @@
-
 package electricity.billing.system;
 
 import java.awt.Color;
@@ -180,9 +179,9 @@ public class Signup extends JFrame implements ActionListener {
                
                String query = null;
                if(atype.equals("Admin")){
-               query = "insert into login values('"+smeter+"','"+susername+"','"+sname+"','"+spswd+"','"+atype+"')";
+               query = "insert into login (meter_no, username, name, password, \"user\") values('"+smeter+"','"+susername+"','"+sname+"','"+spswd+"','"+atype+"')";
                } else {
-                   query = "update login set username = '"+susername+"',password = '"+spswd+"', user = '"+atype+"' where meter_no = '"+smeter+"'";
+                   query = "update login set username = '"+susername+"',password = '"+spswd+"', \"user\" = '"+atype+"' where meter_no = '"+smeter+"'";
                }
                c.s.executeUpdate(query);
                

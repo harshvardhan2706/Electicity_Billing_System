@@ -1,10 +1,9 @@
-
 package electricity.billing.system;
 
-import javax.swing.*;
 import java.awt.*;
-import java.util.*;
 import java.awt.event.*;
+import java.util.*;
+import javax.swing.*;
 //import java.sql.*;
 
 
@@ -124,12 +123,12 @@ public class NewCustomer extends JFrame implements ActionListener {
             String monumber = tfmonumber.getText();
         
             String query1 = "insert into customer values('"+name+"', '"+meter_no+"','"+address+"','"+city+"','"+state+"','"+email+"','"+monumber+"')";
-            String query2 = "insert into login values('"+meter_no+"',' ','"+name+"',' ',' ')";
+            String query2 = "insert into login (meter_no, username, name, password, \"user\") values('"+meter_no+"',' ','"+name+"',' ',' ')";
         
             try{
                 Conn c = new Conn();
             // String query1 = "insert into customer values('"+name+"', '"+meter+"','"+address+"','"+city+"','"+state+"','"+mail+"','"+monumber+"',)";
-              //  String query2 = "insert into login values('"+meter+"',' ','"+name+"',' ',' ')";
+              //  String query2 = "insert into login (meter_no, username, name, password, \"user\") values('"+meter+"',' ','"+name+"',' ',' ')";
                 
                c.s.executeUpdate(query1);
                c.s.executeUpdate(query2);
